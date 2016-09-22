@@ -1,0 +1,50 @@
+var knex = require('../db/knexConfig');
+
+function Albums() {
+  return knex('albums');
+}
+
+//Create
+router.post('/', function(req, res){
+
+  Albums().insert({
+    artist: req.body.artist,
+    name: req.body.name,
+    genre: req.body.genre,
+    stars: req.body.stars,
+    explicit: req.body.explicit
+  }, 'id').then(function(result){
+    res.json(result);
+  });
+
+});
+
+//Read
+router.get('/', function(req, res){
+
+  Albums().select().then(function(result){
+    res.json(result);
+  });
+
+});
+
+//Update
+router.put('/:id', function(req, res){
+
+  Albums().where('id', req.params.id).update({
+    stars: req.body.stars
+  }).then(function(result){
+    res.json(result);
+  });
+
+});
+
+
+//Delete
+router.delete('/:id', function(req, res){
+
+  Albums().where('id', req.params.id).del().then(function(result){
+    res.json(result);
+  });
+
+});

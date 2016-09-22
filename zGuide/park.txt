@@ -1,0 +1,27 @@
+##OLD MIGRATION authors_table
+
+-----------------
+
+exports.up = function(knex, Promise) {
+  return knex.schema.createTable('authors_table', function(table) {
+		table.increments('id');
+		table.string('author_1_firstName');
+		table.string('author_1_lastName');
+    table.string('author_1_bio');
+    table.string('author_1_pic_url');
+    table.string('author_2_firstName');
+    table.string('author_2_lastName');
+    table.string('author_2_bio');
+    table.string('author_2_pic_url');
+    table.string('author_3_firstName');
+    table.string('author_3_lastName');
+    table.string('author_3_bio');
+    table.string('author_3_pic_url');
+	});
+};
+
+exports.down = function(knex, Promise) {
+  return knex.schema.dropTable('authors_table');
+};
+
+-----------------

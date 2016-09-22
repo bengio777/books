@@ -29,3 +29,29 @@
 ##Make your views
 
 ##Create Your Migrations
+  - books
+  - authors
+
+##Verify data is showing up in table.
+  - make sure that you have the proper types for your columns
+    - change varchar to text where necessary.
+
+##Make sure middleware is installed in App.js
+
+##Routes are set up in app.js
+
+##Create directory db
+  -- add file knex.js
+  -- est environment
+  -- configure knex inside.
+  -- export
+
+##Set up user.js file
+
+##Set up index.js
+  -- require in dependencies
+
+##Set up query.js folder as per Ian's model. Keeps code tidy.
+
+
+##Be sure to add a 'use strict' to the top of the necessary files.
