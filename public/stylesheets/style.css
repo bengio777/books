@@ -1,0 +1,82 @@
+.header {
+  border: 1px solid grey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.titleDiv {
+  height: 125px;
+  width: 79%;
+  color: black;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 600;
+  background-color: #F7F7F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoDiv {
+    height: 125px;
+    width: 20%;
+    color: black;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    background-color: #E2E2E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circleHeader {
+    border-radius: 50%;
+    width: 44%;
+    height: 76%;
+    border: 1px solid black;
+    /*background-image: url('nakedMan.png');*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*index.hbs styling below*/
+.contentIndex {
+  height: 500px;
+  margin: 115px auto;
+}
+
+.master {
+  border: 1px solid grey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bookDiv {
+  height: 500px;
+  width: 40%;
+  color: black;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 600;
+  background-color: #F7F7F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authorDiv {
+    height: 500px;
+    width: 40%;
+    color: black;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 600;
+    background-color: #E2E2E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
