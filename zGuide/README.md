@@ -55,3 +55,24 @@
 
 
 ##Be sure to add a 'use strict' to the top of the necessary files.
+
+##Identify every element in HTML that needs link w handlebars:
+  - <a href="url">link text</a>
+
+##Identify Every Area in HTML that needs image population with handlebars:
+  - <img src="pic_mountain.jpg" alt="Mountain View" style="width:304px;height:228px;">
+
+## Figure Out how to join Tables
+
+## Map out your URL flow:
+
+## Add Tables to populate to the following Pages:
+  - edit-author
+  - edit-book
+  - authors
+  - books
+  - indv-author
+  - indv-book
+
+## Add dropdown to HTML where needed:
+  -- http://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_select

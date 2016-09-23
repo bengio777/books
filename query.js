@@ -10,36 +10,60 @@ function Authors() {
   return knex('authors_table')
 }
 
+function ConnectBooksAuthors(){
+  return knex('books_table')
+  .join('authors_table', 'books_table.id', '=', 'authors_table.id');
+}
+
 module.exports = {
   getAllAuthors: Authors,
-  getAllAuthors function(id) {
+  getAuthorById: function(id) {
     return Authors().where('id', id);
   };
-  createNewAuthors : function(id , author_1_firstName, author_1_lastName, author_1_bio, author_1_pic_url, author_2_firstName, author_2_lastName, author_2_bio, author_2_pic_url, author_3_firstName, author_3_lastName, author_3_bio, author_3_pic_url)
+  createNewAuthors : function(id , author_firstName, author_lastName, author_bio, author_pic_url)
   {   return Authors().insert({
-        author_1_firstName : author1FirstN,
-        author_1_lastName  : author2LastN,
-        author_1_bio : author1Bio
-        author_1_pic_url : author1PicUrl,
-
-        author_2_firstName : author1FirstN,
-        author_2_lastName  : author2LastN,
-        author_2_bio : author1Bio
-        author_2_pic_url : author1PicUrl,
-
-        author_3_firstName : author1FirstN,
-        author_3_lastName  : author2LastN,
-        author_3_bio : author1Bio,
-        author_3_pic_url : author1PicUrl
+        // do we need id? Why/Whynot?
+        // id: authorId,
+        author_firstName : authorFirstN,
+        author_lastName  : authorLastN,
+        author_bio : authorBio
+        author_pic_url : authorPicUrl,
   })
 
 },
   deleteAuthor : function (AuthorId)
   {
-    return Authors().where('Authors_Id', AuthorId).del();
-  }
+    //should below be 'authors_table_Id'?
+    return Authors().where('id', id).del();
+  },
   getAllAuthors : Authors,
   getAuthorById : function(AuthorId) {
-      return Authors()
+    //should below be 'authors_table_Id'?
+    return Authors().where('authors_table_Id')
+  },
+
+  //recreate above but for books
+  getAllBook: Books,
+  getBookbyId: function(id) {
+    return Books().where('id', id);
+  },
+  createNewBooks : function(id, book_title, genre, description, cover_url)
+  { return Books().insert({
+    book_title : bookTitle,
+    genre: bookGenre,
+    description: bookDescription,
+    cover_url: bookCoverUrl,
+  })
+
+  },
+  //Are you sure BookId is correct?
+  deleteBook : function(BookId){
+  //should below be 'authors_table_Id'?
+  return Books().where('id', id).del();
   }
-}
+  getAllBooks : Books,
+  //Are you sure BookId is correct?
+  getBookbyId : function(BookId) {
+    return Authors().where('books_table_Id')
+  }
+};
